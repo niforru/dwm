@@ -22,7 +22,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8" };
+static const char *tags[] = { "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -51,8 +51,7 @@ static const Layout layouts[] = {
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
-	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
+	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} },
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
@@ -98,12 +97,12 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
 
-    { MODKEY, 						XK_m,      spawn, 		   {.v = mute_vol } },
-    { MODKEY, 					    XK_0, 	   spawn,          {.v = up_vol } },
-    { MODKEY, 						XK_o, 	   spawn, 		   {.v = down_vol } },
+	{ MODKEY, 						XK_m,      spawn,       {.v = mute_vol } },
+    { MODKEY, 					    XK_0, 	   spawn,       {.v = up_vol } },
+    { MODKEY, 						XK_o, 	   spawn, 		{.v = down_vol } },
 
-    { MODKEY, 						XK_equal, spawn, 		   {.v = brighter } },
-    { MODKEY, 						XK_minus, spawn, 		   {.v = dimmer } },
+    { MODKEY, 						XK_equal, spawn, 		{.v = brighter } },
+    { MODKEY, 						XK_minus, spawn, 		{.v = dimmer } },
 };
 
 /* button definitions */
@@ -117,5 +116,4 @@ static const Button buttons[] = {
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
