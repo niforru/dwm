@@ -40,6 +40,7 @@ like this in your .xinitrc:
     	sleep 1
     done &
     exec dwm
+Or just download my .xinitrc from https://github.com/niforru/dotfiles
 
 
 Configuration
