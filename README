@@ -1,12 +1,15 @@
-dwm - dynamic window manager
+dwm(Niforrus build) - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
 
+In this build of dwm volume controls and brightness control has been supported. 
 
 Requirements
 ------------
 In order to build dwm you need the Xlib header files.
-
+Optional:
+    - pactl(Volume)
+    - brightnessctl(Brightness)
 
 Installation
 ------------
@@ -41,8 +44,7 @@ like this in your .xinitrc:
     done &
     exec dwm
 
-Or just download my .xinitrc from https://github.com/niforru/dotfiles
-
+or just download my .xinitrc from https://github.com/niforru/dotfiles
 
 Configuration
 -------------
