@@ -22,14 +22,14 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "[]", "[]", "[]", "[]", "[]", "[]", "[]", "[]" };
+static const char *tags[] = { " ", " ", " ", " ", " ", " ", " ", " " };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask         monitor */
+	/* class      instance    title        mask         monitor */
 	{ "Gimp",     				NULL,       	NULL,       0,                -1 },
 	{ "Firefox",  				NULL,       	NULL,       1 << 7,           -1 },
 	{ "Visual Studio Code", 	NULL, 			NULL,   	1 << 7,			  -1 },
@@ -43,7 +43,6 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
-	{ "[M]",      monocle },
 };
 
 /* key definitions */
