@@ -10,8 +10,8 @@ In order to build dwm you need the Xlib header files.
 
 ### Optional
 
-    - pactl(Volume)
-    - brightnessctl(Brightness)
+    > pactl(Volume)
+    > brightnessctl(Brightness)
 
 ## Installation
 
