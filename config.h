@@ -66,42 +66,44 @@ static const char *down_vol[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", 
 static const char *mute_vol[] = { "pactl", "set-sink-mute",   "@DEFAULT_SINK@", "toggle", NULL };
 
 /* brightness */
-
 static const char *brighter[] = { "brightnessctl", "set", "5%+", NULL };
 static const char *dimmer[]   = { "brightnessctl", "set", "5%-", NULL };
 
+/* screenshotting */
+static const char *screenshot[] = { "scrot", "-s", NULL};
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,             			XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,             			XK_q,      killclient,     {0} },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_minus,  setgaps,        {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_Tab,    setgaps,        {.i = 0  } },
-	TAGKEYS(                        XK_1,                      0)
-	TAGKEYS(                        XK_2,                      1)
-	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_r,      quit,           {0} },
+	{ MODKEY,                       XK_p,      	spawn,          {.v = dmenucmd } },
+	{ MODKEY,             			XK_Return,	spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_j,      	focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_k,      	focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_Tab,    	view,           {0} },
+	{ MODKEY,             			XK_q,      	killclient,     {0} },
+	{ MODKEY,                       XK_comma,  	focusmon,       {.i = -1 } },
+	{ MODKEY,                       XK_period, 	focusmon,       {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_comma,  	tagmon,         {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_period, 	tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_minus,  	setgaps,        {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_equal,  	setgaps,        {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Tab,    	setgaps,        {.i = 0  } },
+	TAGKEYS(                        XK_1,                      	0)
+	TAGKEYS(                        XK_2,                      	1)
+	TAGKEYS(                        XK_3,                      	2)
+	TAGKEYS(                        XK_4,                      	3)
+	TAGKEYS(                        XK_5,                      	4)
+	TAGKEYS(                        XK_6,                      	5)
+	TAGKEYS(                        XK_7,                      	6)
+	TAGKEYS(                        XK_8,                      	7)
+	TAGKEYS(                        XK_9,                      	8)
+	{ MODKEY|ShiftMask,             XK_r,      	quit,           {0} },
 
-	{ MODKEY, 						XK_m,      spawn,       {.v = mute_vol } },
-    { MODKEY, 					    XK_0, 	   spawn,       {.v = up_vol } },
-    { MODKEY, 						XK_o, 	   spawn, 		{.v = down_vol } },
-
-    { MODKEY, 						XK_equal, spawn, 		{.v = brighter } },
-    { MODKEY, 						XK_minus, spawn, 		{.v = dimmer } },
+	{ MODKEY, 						XK_m,      	spawn,       	{.v = mute_vol } },
+    { MODKEY, 					    XK_0, 	   	spawn,       	{.v = up_vol } },
+    { MODKEY, 						XK_o, 	   	spawn, 			{.v = down_vol } },
+    { MODKEY, 						XK_equal, 	spawn, 			{.v = brighter } },
+    { MODKEY, 						XK_minus, 	spawn, 			{.v = dimmer } },
+	{ MODKEY,						XK_s,		spawn,			{.v = screenshot } },
 };
 
 /* button definitions */
