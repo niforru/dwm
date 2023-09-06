@@ -5,7 +5,6 @@ include config.mk
 
 SRC = drw.c dwm.c util.c
 OBJ = ${SRC:.c=.o}
-IFARCH = /bin/pacman
 
 all: options dwm
 
