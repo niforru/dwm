@@ -18,6 +18,7 @@ In order to build dwm you need the Xlib header files (if using arch linux this s
 
     > pactl(Volume)
     > brightnessctl(Brightness)
+    > any nerdfont font
 
 ## Installation
 
@@ -27,7 +28,7 @@ the /usr/local namespace by default).
 Afterwards enter the following command to build and install dwm (if
 necessary as root):
 
-    make clean install
+    make install clean
 
 
 ## Running dwm
