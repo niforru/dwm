@@ -2,7 +2,13 @@
 
 dwm is an extremely fast, small, and dynamic window manager for X.
 
-In this build of dwm volume controls and brightness controls as well as auto installed dependencies for arch have been added. 
+## Added features
+
+    > Volume Controls
+    > Brightness Controls
+    > Status bar
+
+The status bar is a modified version of https://github.com/joestandring/dwm-bar
 
 ## Requirements
 

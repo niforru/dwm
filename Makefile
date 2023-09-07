@@ -5,6 +5,7 @@ include config.mk
 
 SRC = drw.c dwm.c util.c
 OBJ = ${SRC:.c=.o}
+FILE=/etc/resolv.conf
 
 all: options dwm
 
@@ -37,12 +38,7 @@ dist: clean
 	rm -rf dwm-${VERSION}
 
 install: all
-	@if [ -x $$(command -v pacman) ]; then \
-		echo "Installing dependencies"; \
-		pacman -S libx11 libxft xorg-server xorg-xinit --noconfirm --needed; \
-	else \
-		echo "Try Arch"; \
-	fi
+	bash install.sh
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	cp -f dwm ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
