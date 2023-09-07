@@ -2,11 +2,11 @@
 
 dwm is an extremely fast, small, and dynamic window manager for X.
 
-In this build of dwm volume controls and brightness control have been added. 
+In this build of dwm volume controls and brightness controls as well as auto installed dependencies for arch have been added. 
 
 ## Requirements
 
-In order to build dwm you need the Xlib header files.
+In order to build dwm you need the Xlib header files (if using arch linux should be installed by default).
 
 ### Optional
 
@@ -51,4 +51,6 @@ like this in your .xinitrc:
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
 
-more configuration options can be found at my .xinitrc from https://github.com/niforru/dotfiles
+The .orig files are the last version of files that appear to be working correctly.
+
+More configuration options can be found at my .xinitrc from https://github.com/niforru/dotfiles
