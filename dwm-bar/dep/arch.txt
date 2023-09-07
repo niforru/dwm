@@ -1,0 +1,11 @@
+alsa-utils
+cmus
+xorg-setxkbmap
+extra/mpc
+networkmanager
+networkmanager-openvpn
+calcurse
+transmission-remote-gtk
+connman
+curl
+pamixer
