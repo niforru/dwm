@@ -6,7 +6,7 @@ In this build of dwm volume controls and brightness controls as well as auto ins
 
 ## Requirements
 
-In order to build dwm you need the Xlib header files (if using arch linux should be installed by default).
+In order to build dwm you need the Xlib header files (if using arch linux this should be installed by default).
 
 ### Optional
 
