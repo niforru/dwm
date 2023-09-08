@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd dwmblocks && make install clean && cd ..
+
 # Checks if pacman is installed and if so install dependencies and if not gives a helpful suggestion
 FILE=/bin/pacman
 if [ -f "$FILE" ]; then
