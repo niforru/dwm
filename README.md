@@ -58,6 +58,9 @@ like this in your .xinitrc:
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
 
+## TODO
+    [] intergrate dwmblocks directly in the main binary
+
 The .orig files are the last version of files that appear to be working correctly.
 
 More configuration options can be found at my .xinitrc from https://github.com/niforru/dotfiles
