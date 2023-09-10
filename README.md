@@ -8,7 +8,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
     > Brightness Controls
     > Status bar
 
-The status bar is a modified version of https://github.com/joestandring/dwm-bar
+The status bar is a modified version of https://github.com/torrinfail/dwmblocks
 
 ## Requirements
 
