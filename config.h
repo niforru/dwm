@@ -29,10 +29,9 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title        mask         monitor */
+	/* class      				instance    	title       mask			monitor */
 	{ "Gimp",     				NULL,       	NULL,       0,                -1 },
 	{ "Firefox",  				NULL,       	NULL,       1 << 7,           -1 },
-	{ "Visual Studio Code", 	NULL, 			NULL,   	1 << 7,			  -1 },
 };
 
 /* layout(s) */
@@ -59,6 +58,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_black, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *dwmblockscmd[] = { "dwmblocks", NULL};
 
 /* audio */
 static const char *up_vol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+2%",   NULL };
@@ -76,6 +76,8 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      	spawn,          {.v = dmenucmd } },
 	{ MODKEY,             			XK_Return,	spawn,          {.v = termcmd } },
+	{ MODKEY,						XK_b,		spawn,			{.v = dwmblockscmd} },
+	{ MODKEY| ShiftMask,			XK_b,		killclient,		{.v = dwmblockscmd} },
 	{ MODKEY,                       XK_j,      	focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      	focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_Tab,    	view,           {0} },

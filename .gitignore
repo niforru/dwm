@@ -1,2 +1,12 @@
+# Random stuff that doesn't need to be shared
+
 /backgrounds
 package.json
+
+# dwm stuff generated through make but not needed
+
+dwm
+drw.o
+dwm.o
+util.o
+dwm-6.4.tar.gz
