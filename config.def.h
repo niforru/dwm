@@ -73,7 +73,7 @@ static const char *dimmer[]   = { "brightnessctl", "set", "5%-", NULL };
 static const char *screenshot[] = { "scrot", "-s", NULL};
 
 static const Key keys[] = {
-	/* modifier                     key        function        argument */
+	/* modifier                     key         function        argument */
 	{ MODKEY,                       XK_p,      	spawn,          {.v = dmenucmd } },
 	{ MODKEY,             			XK_Return,	spawn,          {.v = termcmd } },
 	{ MODKEY,						XK_b,		spawn,			{.v = dwmblockscmd} },
