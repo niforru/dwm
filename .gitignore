@@ -6,6 +6,7 @@ package.json
 
 # dwm stuff generated through make but not needed
 
+DEPDONE.txt
 dwm
 drw.o
 dwm.o
