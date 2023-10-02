@@ -30,7 +30,6 @@ necessary as root):
 
     make install clean
 
-
 ## Running dwm
 
 Add the following line to your .xinitrc to start dwm using startx:
@@ -65,3 +64,4 @@ More configuration options can be found at my .xinitrc from https://github.com/n
 
 ## TODO
     [] intergrate dwmblocks directly in the main binary
+	[] add up/download speed to dwmblocks
