@@ -47,7 +47,6 @@ static Window root;
 static void (*writestatus) () = pstdout;
 #endif
 
-
 #include "blocks.h"
 
 static char statusbar[LENGTH(blocks)][CMDLENGTH] = {0};
