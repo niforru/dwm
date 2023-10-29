@@ -28,8 +28,9 @@ the /usr/local namespace by default).
 Afterwards enter the following command to build and install dwm (if
 necessary as root):
 
-    make install clean
-
+```sh
+    $ make install clean
+```
 ## Running dwm
 
 Add the following line to your .xinitrc to start dwm using startx:
